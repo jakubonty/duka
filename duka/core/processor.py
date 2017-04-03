@@ -1,6 +1,6 @@
 import struct
 from datetime import timedelta, datetime
-from lzma import LZMADecompressor, LZMAError, FORMAT_AUTO
+from _lzma import LZMADecompressor, LZMAError, FORMAT_AUTO
 from .utils import is_dst
 
 

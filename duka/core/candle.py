@@ -2,7 +2,7 @@ from datetime import datetime
 
 
 class Candle:
-    def __init__(self, symbol, timestamp, timeframe, sorted_values):
+    def __init__(self, symbol, timestamp, timeframe, sorted_values, ask_volume, bid_volume):
         self.symbol = symbol
         self.timestamp = timestamp
         self.timeframe = timeframe
@@ -10,6 +10,8 @@ class Candle:
         self.close_price = sorted_values[len(sorted_values) - 1]
         self.high = max(sorted_values)
         self.low = min(sorted_values)
+        self.ask_volume = ask_volume
+        self.bid_volume = bid_volume
 
     def __str__(self):
         return str(datetime.fromtimestamp(self.timestamp)) + " [" + str(self.timestamp) + "] " \
